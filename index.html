@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yummy</title>
+    
+    <link rel="stylesheet" href="webfonts/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body style="overflow: visible;" class="position-relative">
+    <div class="home d-flex bg-dark w-100 position-relative">
+        
+          <div class="side-bar-menus text-white d-flex flex-column justify-content-between position-fixed top-0 z-3 bg-dark ">
+            
+            <ul class="list-unstyled">
+                <li id="Search" class="my-3 mt-5 ms-4 ">Search</li>
+                <li id="Categories" class="my-3 ms-4">Categories</li>
+                <li id="Area" class="my-3 ms-4">Area</li>
+                <li id="Ingredients" class="my-3 ms-4">Ingredients</li>
+                <li id="Contact" class="my-3 ms-4">Contact Us</li>
+            </ul>
+            <div class="copy m-4">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <p>Copyright Â© 2019 All Rights
+                    Reserved.</p>
+            </div>
+             </div>
+        <div class="side-bar bg-light d-flex flex-column align-items-center position-fixed top-0 z-3" >
+        <img src="images/logo.png" class="w-75 mt-4" alt="logo">
+        <i class="fa-solid fa-bars fs-1" id="bar"></i>
+        <i class="fa-solid fa-xmark fs-1 d-none" id="close"></i>
+   
+    <div class="d-flex flex-column mb-4">
+    <i class="fa-solid fa-globe mb-2"></i>
+    <i class="fa-solid fa-share-nodes"></i>
+    </div>
+    </div>
+    
+    <div class="main p-1 ">
+        <div class="container">
+        <div class="row m-5" id="meal-card">
+            
+            
+        </div>
+    </div>
+    </div>
+    </div>    
+
+    <div class="search bg-dark " id="search">
+        <div class="container d-flex ">
+        <div class="input-group mb-3 me-4 my-5">
+           
+            <input type="text" class="form-control" placeholder="Search by Name" id="search-name">
+          </div>
+          <div class="input-group mb-3 ms-4 my-5">
+            
+            <input type="text"  class="form-control" maxlength="1" placeholder="Search by Firstname" id="search-Flet">
+          </div>
+        </div>
+        <div class="container">
+        <div class="row" id="search-meal">
+            <span class="loader m-auto mt-5 d-none"></span>
+        </div>
+    </div>
+    </div>
+
+    <div class="category bg-dark">
+        <div class="container">
+            <div class="row m-1 "id="cat-meal-card">
+                
+                
+            </div>
+            <div class="row m-1 "id="cat-meals-card">
+                
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="area bg-dark">
+        <div class="container">
+            <div class="row m-1 "id="area-meal-card">
+                <!-- <span class="loader m-auto mt-5"></span> -->
+                    
+                    
+                </div>
+                <div class="row m-1 "id="area-meals-card">
+                    
+                        
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Ingredients bg-dark">
+        <div class="container">
+            <div class="row m-1 " id="ing-meal-card">
+                <div class="col-md-3 rounded-1 bg-danger">
+                    <span class="loader m-auto mt-5"></span>
+                </div>
+                <div class="row m-1 " id="ing-meals-card">
+                    <div class="col-md-3 rounded-1 bg-danger">
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Contact-Us bg-dark">
+        <div class="container p-1">
+            <div class="d-flex align-items-center justify-content-center contact-item">
+            <div class="w-50 px-4">
+            
+           
+                <input type="text" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Name" id="name">
+              <div class="alert d-none alert-danger py-1 mt-2">
+                <small>Name is not valid</small>
+              </div>
+            
+            
+              
+                
+                <input type="tel" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Phone" id="phone">
+                <div class="alert d-none alert-danger py-1 mt-2">
+                    <small>Phone is not valid</small>
+                  </div>
+            
+              
+           
+                <input type="password" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Password" id="password">
+                <div class="alert d-none alert-danger py-1 mt-2">
+                    <small>Pasword is not valid</small>
+                  </div>
+            
+            </div>
+            <div class="w-50">
+              
+                
+                <input type="email" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Email" id="email">
+                <div class="alert d-none alert-danger py-1 mt-2">
+                    <small>Email is not valid</small>
+                  </div>
+           
+              
+           
+                <input type="number" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your Age" id="Age">
+                <div class="alert d-none alert-danger py-1 mt-2">
+                    <small>Age is not valid</small>
+                  </div>
+            
+              
+                
+                <input type="password" oninput="ValidateInputes(this)" class="form-control my-3" placeholder="Enter Your REpassword" id="repassword">
+                <div class="alert d-none alert-danger py-1 mt-2">
+                    <small>Password is not valid</small>
+                  </div>
+            
+            </div>
+        </div>
+            <button type="button" id="Submit"  class="btn btn-outline-danger disabled">Submit</button>
+
+
+
+
+
+        </div>
+    </div>
+
+   
+
+    <div class="container" >
+        <div class="row" id="INFO">
+           
+        
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/area.js"></script>
+   <script src="js/category.js"></script>
+   <script src="js/ing.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
